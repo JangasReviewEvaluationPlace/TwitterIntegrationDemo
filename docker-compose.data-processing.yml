@@ -5,10 +5,10 @@ services:
     build: ./DataProcessing
     container_name: nanogiants_hackathon_twitteretldemo_data_processing
     environment:
-      - KAFKA_BOOTSTRAP_SERVER=kafka-broker:9092
+      - KAFKA_BOOTSTRAP_SERVER=kafka-broker:9093
       - KAFKA_SCHEMA_REGISTRY_URL=http://kafka-schema-registry:8081/
       - KAFKA_CONSUMER_GROUP_ID=pythonprocessing
-      - KAFKA_AUTO_OFFSET_RESET=latest
+      - KAFKA_AUTO_OFFSET_RESET=earliest
       - TWITTER_TOPIC=twitter-etl
       - POSTGRES_HOST=pg-db-twitter
       - POSTGRES_PORT=5432
