@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  pg-db-nlp:
+    image: postgres:alpine
+    container_name: nanogiants_hackathon_pg_twitter
+    ports:
+      - 54321:5432
+    environment:
+      - POSTGRES_DB=twitter_db
+      - POSTGRES_USER=twitter_db_user
+      - POSTGRES_PASSWORD=db_password
+    volumes:
+      - pg-db-twitter-data:/var/lib/postgresql/data/
+
+volumes:
+  pg-db-twitter-data:
