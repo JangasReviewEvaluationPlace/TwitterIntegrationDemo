@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  pg-db-nlp:
+    build: ./DataProcessing
+    container_name: nanogiants_hackathon_twitteretldemo_data_processing
+    environment:
+      - KAFKA_BOOTSTRAP_SERVER=kafka-broker:9092
+      - KAFKA_SCHEMA_REGISTRY_URL=http://kafka-schema-registry:8081/
+      - KAFKA_CONSUMER_GROUP_ID=pythonprocessing
+      - KAFKA_AUTO_OFFSET_RESET=latest
+      - TWITTER_TOPIC=twitter-etl
+      - POSTGRES_HOST=pg-db-twitter
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=twitter_db_user
+      - POSTGRES_PASSWORD=db_password
+      - POSTGRES_DATABASE=twitter_db
+    command: 
+      - sh
+      - -c
+      - |
+        poetry run python main.py
