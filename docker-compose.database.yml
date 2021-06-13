@@ -3,7 +3,7 @@ version: "3"
 services:
   pg-db-nlp:
     image: postgres:alpine
-    container_name: nanogiants_hackathon_pg_twitter
+    container_name: nanogiants_hackathon_twitteretldemo_pg_twitter
     ports:
       - 54321:5432
     environment:
