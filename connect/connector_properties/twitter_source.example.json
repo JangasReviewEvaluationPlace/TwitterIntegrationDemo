@@ -3,7 +3,7 @@
   "config": {
     "connector.class": "com.github.jcustenborder.kafka.connect.twitter.TwitterSourceConnector",
     "tasks.max": 1,
-    "filter.keywords": "programming,python,tensorflow,kafka,scala",
+    "filter.keywords": "hackathon,programming",
     "twitter.oauth.consumerKey": "",
     "twitter.oauth.consumerSecret": "",
     "twitter.oauth.accessToken": "",
