@@ -28,4 +28,4 @@ curl -i -X POST http://localhost:8083/connectors \
   -H "Content-Type: application/json" \
   -d "$(<'connect/connector_properties/twitter_elastic_sink.json')"
 
-docker-compose -f docker-compose.data-processing.yml up -d
+docker-compose -f docker-compose.data-processing.yml up
