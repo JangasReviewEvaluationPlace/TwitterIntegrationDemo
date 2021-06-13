@@ -1,0 +1,3 @@
+[submodule "DataProcessing"]
+	path = DataProcessing
+	url = git@github.com:JangasReviewEvaluationPlace/DataProcessing.git
